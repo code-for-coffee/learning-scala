@@ -58,4 +58,14 @@ It’s a common convention to use names like f, g, and h for parameters to a hig
 * To make sure we don't swamp our heap with recursive requests, we use tail recursion
 * Annotate recursive loops with `@annotation.tailrec`
 
-####
+#### Functions as Values: under the hood
+
+* When you define a function literal, a Scala object is defined witha method called apply.
+* Objects that have apply can be called as if they are themselves methods
+* `(a,b) => a < b` is syntactic sugar for:
+
+```scala
+val lessThan = new Function2[Int, Int, Boolean] {
+    def apply(a: Int, b: int) = a < b
+}
+ ```
