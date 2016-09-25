@@ -12,6 +12,6 @@ object BasicModule {
     str.format(x)
   }
 
-  def main(args: Array[String]): Unit =
+  def main(args: Array[String]): Unit = // unit is a void
     println(formatResult(sum(10,2)))
 }

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f78ea2f-3ada-4610-ae10-6d00fcdabfc3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/modules/HelloWorld.scala" afterPath="$PROJECT_DIR$/wk1/HelloWorld.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/modules/MyModule.scala" afterPath="$PROJECT_DIR$/wk1/MyModule.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning_scala.iml" afterPath="$PROJECT_DIR$/learning_scala.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wk2/BasicModule.scala" afterPath="$PROJECT_DIR$/wk2/BasicModule.scala" />
     </list>
     <ignored path="learning_scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="BasicModule.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wk2/BasicModule.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -809,12 +805,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474833046708</updated>
-      <workItem from="1474833049283" duration="1128000" />
+      <workItem from="1474833049283" duration="1207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1128000" />
+    <option name="totallyTimeSpent" value="1207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="723" y="29" width="1080" height="937" extended-state="0" />
@@ -943,8 +939,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wk2/BasicModule.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
           <folding />
         </state>
       </provider>
