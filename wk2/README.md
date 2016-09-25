@@ -1,4 +1,4 @@
-## Scala Wk2
+## Wk2: Functional Programming & Scala 101
 
 #### Objects
 
@@ -32,3 +32,11 @@
 
 * `scala ModuleName.scala` 
 * awwww yeaaah
+
+#### Higher-Order Functions
+
+* Pass functions to function
+* functions are values
+* Like values and other types, functions can be assigned to variables, stored, etc
+* This is similar to Javascript
+* Functions that accept other functions are arguments are higher-order functions (HOF)

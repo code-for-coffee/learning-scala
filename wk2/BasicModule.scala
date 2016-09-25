@@ -12,6 +12,21 @@ object BasicModule {
     str.format(x)
   }
 
+  def factorial(n :Int): Int = {
+    // loops functionally = recursive calls
+    // called 'go' or 'loop' by definition
+    // inner function of factorial
+    // n is the remaining value
+    // acc is the accumulated factorial
+    // to advance, call go(n-1, n*acc)
+    // to exit, we return the acc if n <= 0
+    def go(n: Int, acc: Int): Int =
+      if (n <= 0) acc
+      else go(n-1, n*acc)
+
+    go(n, 1)
+  }
+
   def main(args: Array[String]): Unit = // unit is a void
     println(formatResult(sum(10,2)))
 }
