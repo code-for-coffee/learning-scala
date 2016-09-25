@@ -40,3 +40,22 @@
 * Like values and other types, functions can be assigned to variables, stored, etc
 * This is similar to Javascript
 * Functions that accept other functions are arguments are higher-order functions (HOF)
+
+###### Naming Conventions
+
+It’s a common convention to use names like f, g, and h for parameters to a higher-order function. In functional programming, we tend to use very short variable names, even one-letter names. This is usually because HOFs are so general that they have no opinion on what the argument should actually do. All they know about the argument is its type. Many functional programmers feel that short names make code eas- ier to read, since it makes the structure of the code easier to see at a glance.
+
+#### Polymorphism / Abstraction
+
+* We've only used monomorphic data; functions that operate one one type of data
+* This means absolute and factorial require Int args
+* Our HOF format function also requires `f: Int => Int`
+* We want our HOF's to accept _any_ type given
+* This would create a polymorphic function
+
+#### Recursive Functions and Tails
+
+* To make sure we don't swamp our heap with recursive requests, we use tail recursion
+* Annotate recursive loops with `@annotation.tailrec`
+
+####
