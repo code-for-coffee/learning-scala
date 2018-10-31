@@ -11,11 +11,6 @@ class AppRouter extends ScalatraServlet {
     val planets = ListBuffer[Planet]()
   }
 
-  get("/") {
-    contentType = "text/html"
-    views.html.hello()
-  }
-
   case class Planet(
     name: String,
     orbit: String,
@@ -33,6 +28,11 @@ class AppRouter extends ScalatraServlet {
       safe { 
         str => toPlanet(str)
       }
+
+  get("/") {
+    contentType = "text/html"
+    "Hello there, Planetary explorer."
+  }
 
   get("/api/planets") {
     AppModel.planets

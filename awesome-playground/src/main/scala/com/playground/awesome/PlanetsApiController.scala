@@ -25,7 +25,7 @@ class PlanetsApiController extends ScalatraServlet {
       }
 
   get("/api/planets") {
-    views.html.hello()
+    "Hello"
   }
 
   post("/api/planets/submit") {

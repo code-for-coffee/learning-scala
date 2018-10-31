@@ -20,5 +20,4 @@ libraryDependencies ++= Seq(
   "org.json4s"   %% "json4s-jackson" % "3.6.1"
 )
 
-enablePlugins(SbtTwirl)
 enablePlugins(ScalatraPlugin)
