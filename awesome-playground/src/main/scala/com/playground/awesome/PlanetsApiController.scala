@@ -1,14 +1,27 @@
 package com.playground.awesome
 
+import org.json4s.{DefaultFormats, Formats}
 import org.scalatra._
 import scala.collection.mutable.ListBuffer
 import scalate.ScalateSupport
+import org.scalatra.json._
 import org.scalatra.util.conversion.TypeConverter
 
-class PlanetsApiController extends ScalatraServlet with ScalateSupport {
+class PlanetsApiController extends ScalatraServlet with JacksonJsonSupport {
+
+  // Sets up automatic case class to JSON output serialization, required by
+  // the JValueResult trait.
+  protected implicit lazy val jsonFormats: Formats = DefaultFormats
+
+  // all results from controller are json
+  before() {
+    contentType = formats("json")
+  }
 
   object AppStateCache {
-    val planets = ListBuffer[Planet]()
+    val planets = ListBuffer[Planet](
+      new Planet("Mercury", "1", "hot and iron")
+    )
   }
 
   case class Planet(
@@ -29,17 +42,11 @@ class PlanetsApiController extends ScalatraServlet with ScalateSupport {
         str => toPlanet(str)
       }
 
-  get("/") {
-    contentType = "text/html"
-    //layoutTemplate("/WEB-INF/templates/layouts/appLayout.ssp")
-    ssp("/home")
-  }
-
-  get("/api/planets") {
+  get("/planets") {
     AppStateCache.planets
   }
 
-  post("/api/planets/submit") {
+  post("/planets/submit") {
     val name = params.getAs[String]("name").getOrElse(
       halt(BadRequest("Please provide a name"))
     )
@@ -52,7 +59,7 @@ class PlanetsApiController extends ScalatraServlet with ScalateSupport {
     AppStateCache.planets += new Planet(name, orbit, features)
   }
 
-  get("/api/planets/:debug") {
+  get("/planets/:debug") {
     val debug = params("debug")
   }
 
