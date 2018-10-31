@@ -1,20 +1,10 @@
 package com.playground.awesome
 
 import org.scalatra._
-import scala.collection.mutable.ListBuffer
 import scalate.ScalateSupport
 import org.scalatra.util.conversion.TypeConverter
 
-class AppRouter extends ScalatraServlet {
-
-  object AppModel {
-    val planets = ListBuffer[Planet]()
-  }
-
-  get("/") {
-    contentType = "text/html"
-    views.html.hello()
-  }
+class PlanetsApiController extends ScalatraServlet {
 
   case class Planet(
     name: String,
@@ -35,20 +25,13 @@ class AppRouter extends ScalatraServlet {
       }
 
   get("/api/planets") {
-    AppModel.planets
+    views.html.hello()
   }
 
   post("/api/planets/submit") {
-    val name = params.getAs[String]("name").getOrElse(
+    val planet = params.getAs[Planet]("name").getOrElse(
       halt(BadRequest("Please provide a name"))
     )
-    val orbit = params.getAs[String]("orbit").getOrElse(
-      halt(BadRequest("Please provide an orbit"))
-    )
-    val features = params.getAs[String]("features").getOrElse(
-      halt(BadRequest("Please provide planetery feastures"))
-    )
-    AppModel.planets += new Planet(name, orbit, features)
   }
 
   get("/api/planets/:debug") {
